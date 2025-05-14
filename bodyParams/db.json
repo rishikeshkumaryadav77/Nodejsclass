@@ -1,0 +1,13 @@
+{
+  "obj" :[
+    {
+      "name":"rishi",
+      "password":"1234"
+    },
+    {
+      "name":"kumar",
+      "password":"4566"
+    }
+  ]
+}
+

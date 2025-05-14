@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Fetch Example</title>
+</head>
+<body>
+
+  <button id="button1">FakeApi</button>
+  <button id="button2">DummyApi</button>
+
+  <script>
+    document.getElementById("button1").addEventListener("click", () => {
+      fetch("http://localhost:3001/api?type=fake")
+        .then(response => response.json())
+        .then(data => console.log("Fake API Data:", data))
+        .catch(error => console.error("Error:", error));
+    });
+
+    document.getElementById("button2").addEventListener("click", () => {
+      fetch("http://localhost:3001/api?type=dummy")
+        .then(response => response.json())
+        .then(data => console.log("Dummy API Data:", data))
+        .catch(error => console.error("Error:", error));
+    });
+  </script>
+
+</body>
+</html>

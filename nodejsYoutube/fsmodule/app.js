@@ -31,4 +31,7 @@ const fs = require('fs')
   
 // })
 
-
+//unlink
+fs.unlink('input.txt', (err) =>{
+  if(err) throw err
+})

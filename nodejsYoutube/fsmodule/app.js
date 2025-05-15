@@ -13,6 +13,22 @@ const fs = require('fs')
 
 //fs.writefile
 
-fs.writeFile('input.txt', 'removed content', (err) =>{
-  if(err) throw(err)
-})
+// fs.writeFile('input.txt', 'removed content', (err) =>{
+//   if(err) throw err
+// })
+
+
+//appendfile
+// fs.appendFile('input.txt', '\n this is third line line', (err) => {
+//   if(err) throw(err)
+//     console.log('text added')
+// })
+
+
+// fs.appendFile('input.txt', '\n jfuwerfwueklil lkqDRISHI', (err) =>{
+//   if(err) throw(err)
+//   console.log('data added')
+  
+// })
+
+

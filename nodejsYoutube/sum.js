@@ -16,4 +16,8 @@ function greet(){
   return 'Hello, World!'
 }
 
-module.exports = greet;
+function greet2(){
+  return 'namaste'
+}
+
+module.exports = {greet, greet2}

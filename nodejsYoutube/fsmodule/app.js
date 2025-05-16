@@ -1,13 +1,15 @@
 //fs.Readfile
 
-const fs = require('fs')
+const fs = require('fs');
+const { console } = require('inspector');
+const Stream = require('stream')
 
 // fs.readFile('input.txt', 'utf-8', (err,data) => {      //asynchronous 
 //   if(err) throw(err);
 //   console.log(data)
 // })
 
-// const data = fs.readFileSync('input.txt', 'utf-8');  //synchronous
+// const data = fs.readFileSync('input.txt','utf-8');  //synchronous
 // console.log(data)
 
 
@@ -32,6 +34,16 @@ const fs = require('fs')
 // })
 
 //unlink
-fs.unlink('input.txt', (err) =>{
-  if(err) throw err
-})
+// fs.unlink('input.txt', (err) =>{
+//   if(err) throw err
+// })
+
+
+// Stream
+// const writeStream = fs.createWriteStream('input.txt', 'utf-8')
+// writeStream.write('Hello, world!')
+
+//pipe
+const writeStream = fs.createWriteStream('output.txt');
+const readStream = fs.createReadStream('input.txt', 'utf-8');
+readStream.pipe(writeStream);

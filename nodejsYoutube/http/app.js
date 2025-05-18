@@ -15,6 +15,16 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify(user))
     
    }
+   else if(req.url === '/login'){
+    res.end('login successful')
+   }
+   else if(req.url === '/post'){
+    console.log('post method')
+    res.end("post methhod")
+   }
+   else{
+    res.end('bad req')
+   }
    
 });
 

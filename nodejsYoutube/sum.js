@@ -20,4 +20,5 @@ function greet2(){
   return 'namaste'
 }
 
-module.exports = {greet, greet2}
+// module.exports = {greet, greet2}
+module.exports = 'hi this is a module'

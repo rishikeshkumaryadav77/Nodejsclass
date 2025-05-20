@@ -1,6 +1,3 @@
-const greet = require("./sum.js")  //coomon js
-
-// console.log(greet.greet())
-
-
-console.log(greet)
+const file = require('./sum')
+console.log(file.sum(3,4))
+console.log(file.product(3,4))

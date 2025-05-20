@@ -9,5 +9,5 @@ function product(a,b){
 }
 
 module.exports = {
-  sum, product
+  
 }

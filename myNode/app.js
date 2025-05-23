@@ -7,7 +7,7 @@ app.use(cookieParser())
 
 // cookies
 app.get('/', (req, res) =>{
-  res.cookie("hello", "cookie")
+  res.cookie("hello", "cookie", {maxAge: 36000})
   res.send("cookies created")
 })
 

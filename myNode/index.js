@@ -78,14 +78,12 @@ app.post("/user", async(req, res) => {
 //row data  updating in mongo db
 app.put("/update", async(req, res) => {
   res.send('row data updated')
-  const {name,}= req.body
-  console.log(req.body)
-  const data = await Person.find(
-    {
-      name
-    }
-  )
-  // await data.save()
+  const {id}= req.body
+  // console.log(req.body)
+  const data = await Person.findById(id)
+  data.name = "yadav"
+  
+  await data.save()
   console.log(data)
 })
 

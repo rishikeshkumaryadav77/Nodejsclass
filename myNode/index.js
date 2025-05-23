@@ -52,9 +52,9 @@ await mongoose.connect('mongodb://localhost:27017/myDb').then(() =>{
 })
 
 const schema = new mongoose.Schema({
-  name:String,
-  age:Number,
-  email:String
+  name:{type:String, required:true},
+  age:{type:String, required:true},
+  email:{type:String, required:true, unique:true}
 })
 
 const Person = mongoose.model('Person', schema)

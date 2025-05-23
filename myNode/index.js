@@ -87,6 +87,14 @@ app.put("/update", async(req, res) => {
   console.log(data)
 })
 
+//delete person
+app.delete("/delete/:id", async(req, res) =>{
+  const {id}= req.params
+  const data = await Person.findByIdAndDelete(id)
+  res.send("data deleted")
+  console.log(data)
+})
+
 
 
 //form data
